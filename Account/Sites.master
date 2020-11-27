@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Sites.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+ 
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ 
+
+  <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel = "stylesheet">
+
+    
+  
+
+
+ 
+
+
+    
+
+
+   <link href="../Content/bootstrap.css" rel="stylesheet" />
+    
+    <link href="../Content/Site.css" rel="stylesheet" />
+
+
+
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+   
+
+
+</head>
+
+ 
+
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+           
+              
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+
+      
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+
+
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-default cust-header nhs_color" >
+  <div class="container-fluid">
+    <div class="navbar-header nhs_color" ">
+      
+<a class="navbar-brand" rel="home" href="~/default.aspx" title="">
+        <img style=" margin-top: -7px;"
+             src="hblict.png">
+    </a>
+
+<a class="navbar-brand" rel="home" href="#" title="">
+        <img style="margin-top: -7px;"
+             src="hert_logo.png">
+    </a>
+
+
+    </div>
+
+ 
+
+
+    <ul class="nav navbar-nav target-active">
+               
+                               
+                                 <a  class="active" style="font-size:large;color:white !important;" href="~/default.aspx"   id="Home" runat="server" Text="Home"  >Home</a>
+                                 
+                            
+                           
+       
+   
+                 <a style="color:white" runat="server" href="Reports.aspx" title="Reports">Reports</a>
+
+                   <a style="color:white" runat="server" href="Employee.aspx">Employees</a>
+<a style="color:white" runat="server" href="ProjectHierarchy.aspx">Projects</a>
+
+      <a style="color:white" runat="server" href="Client.aspx">Clients</a>
+
+   <a style="color:white" runat="server" href="QM.aspx">QMs</a>
+     <a style="color:white" runat="server" href="Activity.aspx">Activity</a>      
+  <a  href="#" style="align:right; color: #FFFFFF"><H2>HBL ICT Activity Logger</H2></a>
+   
+    </ul>
+    
+  </div>
+
+
+
+
+
+</nav>
+
+				
+
+
+
+
+
+      
+
+      
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - DevOps HBL ICT Services application</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
